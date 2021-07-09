@@ -6,6 +6,7 @@ app.use(express.static("."));
 /// change this to our domain
 const YOUR_DOMAIN = "http://localhost:3000/Subscription";
 
+const PORT = process.env.PORT || 3000;
 app.get("/", (request, response) => {
   return response.send("hello");
 });
@@ -59,4 +60,4 @@ app.post("/yearly-subscription", async (req, res) => {
   });
   res.redirect(303, session.url);
 });
-app.listen(3000, () => console.log("Running on port 3000"));
+app.listen(PORT);
