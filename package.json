@@ -1,0 +1,24 @@
+{
+  "name": "teambeforeself-stripe-payments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavuluriHemanthChowdary/teambeforeself-stripe-payments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavuluriHemanthChowdary/teambeforeself-stripe-payments/issues"
+  },
+  "homepage": "https://github.com/DavuluriHemanthChowdary/teambeforeself-stripe-payments#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "stripe": "^8.160.0"
+  }
+}
