@@ -6,7 +6,11 @@ app.use(express.static("."));
 /// change this to our domain
 const YOUR_DOMAIN = "http://localhost:3000/Subscription";
 
-app.get("/monthly-subscription", async (req, res) => {
+app.get("/", (request, response) => {
+  return response.send("hello");
+});
+
+app.post("/monthly-subscription", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
@@ -31,7 +35,7 @@ app.get("/monthly-subscription", async (req, res) => {
   res.redirect(303, session.url);
 });
 
-app.get("/yearly-subscription", async (req, res) => {
+app.post("/yearly-subscription", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
@@ -55,4 +59,4 @@ app.get("/yearly-subscription", async (req, res) => {
   });
   res.redirect(303, session.url);
 });
-app.listen(3000, () => console.log("Running on port 4242"));
+app.listen(3000, () => console.log("Running on port 3000"));
