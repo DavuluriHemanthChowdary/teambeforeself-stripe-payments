@@ -11,7 +11,7 @@ app.get("/", (request, response) => {
   return response.send("hello");
 });
 
-app.post("/monthly-subscription", async (req, res) => {
+app.get("/monthly-subscription", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
@@ -36,7 +36,7 @@ app.post("/monthly-subscription", async (req, res) => {
   res.redirect(303, session.url);
 });
 
-app.post("/yearly-subscription", async (req, res) => {
+app.get("/yearly-subscription", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [
