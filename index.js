@@ -30,8 +30,8 @@ app.post("/monthly-subscription", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: `https://mental-health-bb940.web.app/`,
-    cancel_url: `https://mental-health-bb940.web.app/`,
+    success_url: `https://teambeforeself-b1c79.web.app/`,
+    cancel_url: `https://teambeforeself-b1c79.web.app/`,
   });
   res.redirect(303, session.url);
 });
@@ -55,8 +55,8 @@ app.post("/yearly-subscription", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: `https://mental-health-bb940.web.app/`,
-    cancel_url: `https://mental-health-bb940.web.app/`,
+    success_url: `https://teambeforeself-b1c79.web.app/`,
+    cancel_url: `https://teambeforeself-b1c79.web.app/`,
   });
   res.redirect(303, session.url);
 });
