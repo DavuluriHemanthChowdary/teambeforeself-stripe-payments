@@ -1,11 +1,9 @@
-const stripe = require("stripe")(
-  "sk_test_51G46P8H9qcs74krf7yy2gVLeQk1KnZWmuX1s0NFZyoVQzCieFwDR28MaeXTw9oMMhjbmvqnGZob6foByXp4P4hRa00lEtCZHZz"
-);
+const stripe = require("stripe")("Add your stripe key");
 const express = require("express");
 const app = express();
 app.use(express.static("."));
 
-/// change this to our domain
+/// change this to our tbs domain
 const YOUR_DOMAIN = "http://localhost:3000/Subscription";
 
 const PORT = process.env.PORT || 3000;
